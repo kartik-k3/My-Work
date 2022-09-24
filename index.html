@@ -5,8 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            font-family: Arial;
+            font-size: 16px;
+            background-color:gainsboro;
+            color: #4f5669;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+        header div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul{
+            display: flex;
+            list-style: none;
+            margin: 0px;
+            margin-right: 55px;
+        }
+        header li{
+            line-height: 24px;
+            margin: 40px 25px 40px 25px;
+            font-weight: bold;
+            color: black;
+        }
+        section{
+            margin: 0px;
+            padding: 0px;
+        }
+        section main{
+            margin: 0px;
+            padding: 0px;
+            height: 500px;
+        }
+        div.home{
+            background-image: url(public/images/portfolio/homepg.png);
+            height: 690px;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <h1>My first project</h1>
+    <header>
+        <img src="public/images/portfolio/header.png" style="margin-left: 45px;">
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>portfolio</li>
+                <li>Page</li>
+                <li>Contact</li>
+            </ul>
+            <button class="btn btn-primary me-5" style="letter-spacing: 2px;height: 55px; width: 200px; background-color: #ec5b53;font-size: 14px;"><b> Get free Consultant </b></button>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="home">
+                <p style="color: #ec5b53; font-size: 19px; font-family: Calibri;letter-spacing: 2px;">GET EVERY SINGLE SOLUTION.</p>
+                <h1 style="color:#002d5b; font-size: 70px; font-family: georgia;">I'm Developer<br>Kartik J. Kewalramani</h1>
+                <p style="font-weight: bold; margin: 40px 0px 40px 0px;">I'm a UI/UX student aspiring to be a Full Stack Web Developer, With a passion for<br> front end technologies,
+                     I specialize in HTML, CSS, Java and C++. I'm looking for<br> opportunities that could help me broaden and use my skillset.</p>
+            </div>
+        </main>
+    </section>
 </body>
 </html>
