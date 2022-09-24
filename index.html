@@ -7,6 +7,7 @@
     <title>Hello</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="public/icons/portfolio.png">
     <style>
         body{
             font-family: Arial;
@@ -44,12 +45,25 @@
         section main{
             margin: 0px;
             padding: 0px;
-            height: 500px;
-        }
-        div.home{
             background-image: url(public/images/portfolio/homepg.png);
             height: 690px;
             background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+        div.home{
+            margin: 0px;
+            padding: 0px;
+            margin-left: 60px;
+        }
+        div.home form{
+            color: white;
+            display: flex;
+            font-size: 18px;
+        }
+        div #form1 button{
+            font-weight: bold;
+            border:1px solid #ec5b53;
         }
     </style>
 </head>
@@ -65,16 +79,25 @@
                 <li>Page</li>
                 <li>Contact</li>
             </ul>
-            <button class="btn btn-primary me-5" style="letter-spacing: 2px;height: 55px; width: 200px; background-color: #ec5b53;font-size: 14px;"><b> Get free Consultant </b></button>
+            <form id="form1">
+                <button class="btn btn-primary me-5" style="letter-spacing: 2px;height: 55px; width: 200px; background-color: #ec5b53;font-size: 14px;">Get free Consultant</button>
+            </form>
         </div>
     </header>
     <section>
         <main>
             <div class="home">
                 <p style="color: #ec5b53; font-size: 19px; font-family: Calibri;letter-spacing: 2px;">GET EVERY SINGLE SOLUTION.</p>
-                <h1 style="color:#002d5b; font-size: 70px; font-family: georgia;">I'm Developer<br>Kartik J. Kewalramani</h1>
+                <h1 style="color:#002d5b; font-size: 70px; font-family: georgia;margin: 40px 0px 20px 0px;">I'm Developer<br>Kartik J. Kewalramani</h1>
                 <p style="font-weight: bold; margin: 40px 0px 40px 0px;">I'm a UI/UX student aspiring to be a Full Stack Web Developer, With a passion for<br> front end technologies,
                      I specialize in HTML, CSS, Java and C++. I'm looking for<br> opportunities that could help me broaden and use my skillset.</p>
+                <form id="form1" name="btn1" style="font-weight: bold;">
+                    <button class="btn btn-primary w-25 me-4" style="background-color: #ec5b53;height: 55px;">Learn More</button>
+                    <button class="btn btn-primary w-25" style="background-color: transparent; color:#002d5b; border:1px solid #ec5b53">Hire Me</button>
+                </form>
+            </div>
+            <div>
+                
             </div>
         </main>
     </section>
