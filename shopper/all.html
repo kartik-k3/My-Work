@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction</title>
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: 6fr 6fr;            
+        }
+        div.container{
+            display: flex;
+            background-color: white;
+            width: fit-content;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        div.container2 div.container{
+            margin-right: 50px;
+            margin-top: 20px;
+        }
+        img.cardimg{
+            height:130px;
+            width: 200px;
+        }
+        div.card{
+            flex-wrap: wrap;
+            display:inlinne-block; vertical-align:top;
+        }
+        h3{
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body bgcolor="#f9f9f9">
+    <main>
+        <div>
+            <div class="container">
+                <div  class="card">
+                    <img class="cardimg" src="../public/images/shopper/flooring.jpg">
+                </div>
+                <div style="display: inline-block;  margin-left: 20px;">
+                    <font face="Arial">
+                    <h2>Flooring</h2>
+                    </font><font color="gray" size="3" face="Arial">
+                        <p style="margin-top:-15px; padding: 5px;">Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit. Aenean commodo ligula.</p>
+                    </font>
+                </div>
+            </div>
+            <div class="container">
+                <div  class="card">
+                    <img class="cardimg" src="../public/images/shopper/doors.jpg">
+                </div>
+                <div style="display: inline-block;  margin-left: 20px;">
+                    <font face="Arial">
+                    <h2>Windows & door</h2>
+                    </font><font color="gray" size="3" face="Arial">
+                        <p style="margin-top:-15px; padding: 5px;">Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit. Aenean commodo ligula.</p>
+                    </font>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="container">
+                <div  class="card">
+                    <img class="cardimg" src="../public/images/shopper/paint.jpg">
+                </div>
+                <div style="display: inline-block;  margin-left: 20px;">
+                    <font face="Arial">
+                    <h2>Painting</h2>
+                    </font><font color="gray" size="3" face="Arial">
+                        <p style="margin-top:-15px; padding: 5px;">Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit. Aenean commodo ligula.</p>
+                    </font>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

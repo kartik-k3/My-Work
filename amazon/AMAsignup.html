@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        body div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.REGfrm form{
+            height: 560px;
+            width: 350px;
+            border: 1px solid gainsboro;
+            border-radius: 1%;
+        }
+        form label{
+            font-size: 12px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        div input{
+            width: 310px;
+            margin-top: -15px;
+        }
+        div select{
+            text-align: center;
+            width: 70px;
+            margin-right: 10px;
+            margin-top: -30px;
+            height: 30px;
+            background-color: #e7e9ec;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body vlink="black">
+    <div>
+        <center>
+            <img src="../public/images/amazon/Amazon.png" height="60px">
+        </center>
+    </div>
+    <div class="REGfrm">
+        <form name="register">
+            <h4 style="padding: 10px; font-size: 28px; margin-left: 5px;">
+                <font face="Arial">Create Account</font>
+            </h4>
+            <label for="name"><p>Your Name</p></label>
+            <div>
+                <input class="mb-3" type="text" placeholder="First and last name" name="name">
+            </div>
+            <label class="mb-2" for="name"><p>Mobile number</p></label>
+            <div>
+                <select name="name">
+                    <optgroup>
+                        <option value="+91" selected>IN+91</option>
+                        <option value="+350">GI+350</option>
+                        <option value="+357">CY+357</option>
+                    </optgroup>
+                </select>
+                <input style="width: 230px;" class="mb-3" type="text" placeholder="Mobile number" name="name">
+            </div>
+            <label for="name"><p>Email (optional)</p></label>
+            <div>
+                <input class="mb-3" pattern="(?=.*@)(?=.*\.).{4,29}" type="text" name="name">
+            </div>
+            <label for="name"><p>Password</p></label>
+            <div>
+                <input class="mb-1" type="password" pattern=".{6,20}" placeholder="Atleast 6 characters" name="name">
+            </div>
+            <p style="font-size:12px; margin-left:20px;"><font color="blue"><i> i </i></font>Passwords must be at least 6 characters.</p>
+            <p style="font-size: 13px; margin-left: 20px;">We will send you a text to verify your phone<br>
+                Message and Data rates may apply.</p>
+            <div>
+                <button class="btn btn-primary mb-5"  style="width: 310px; height: 35px; background-color: #f0c352; border-color: black; color: black; font-size: 13px;"><a href="index.html">Continue</a></button>
+            </div>
+            <p style="font-size: 13px; margin-left:20px;">Already have an account? <a href="AMAsignin.html">Sign in</a><br>
+               Buying for work? <a href="">Create a free business account</a></p>
+        </form>
+    </div>
+</body>
+</html>

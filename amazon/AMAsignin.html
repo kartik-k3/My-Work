@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        body div.SGNfrm{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       div form{
+            height: auto;
+            width: 350px;
+            border: 1px solid gainsboro;
+            border-radius: 1%;
+        }
+        form label{
+            font-size: 12px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        div input{
+            width: 310px;
+            margin-top: -15px;
+
+        }
+        form div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body vlink="black">
+    <center>
+        <img src="../public/images/amazon/Amazon.png" height="60px">
+    </center>
+    <div class="SGNfrm">
+        <form>
+            <h4 style="padding: 10px; font-size: 28px; margin-left: 15px; margin-top: 15px;">
+                <font face="Arial">Sign In</font>
+            </h4>
+            <label for="name"><p>Email or mobile phone number</p></label>
+            <div>
+                <input class="mb-3" type="text" name="name">
+            </div>
+            <div>
+                <button class="btn btn-primary mb-5 mt-1"  style="width: 310px; height: 35px; background-color: #f0c352; border-color: black; color: black; font-size: 13px;"><a href="index.html">Continue</a></button>
+            </div>
+            <p style="font-size:13px; margin-left:20px; margin-top:-35px;">By continuing, you agree to Amazon's <a href="">Conditions of<br> Use</a> and <a href="">Privacy Notice</a>.</p>
+            <details style="font-size: 13px; margin-left:20px; margin-bottom: 25px;">
+                <summary><a href="">Need help?</a></summary>
+                <p><a href="">Forgot Password</a></p>
+                <p style="margin-top: -15px;"><a href="">Other Issues with Sign-In</a></p>
+            </details>
+        </form>
+    </div>
+    <div class="SGNfrm">
+        <div>
+            <p style="font-size:12px; margin-top: 20px; color: gray; margin-left: 100px;">New to amazon?</p>
+            <a href="AMAsignup.html">
+            <button style="background-color: #eaecef; border-color:gray; color:black;font-size:13px;width:300px;" class="btn btn-primary" >Create your Amazon account</button>
+            </a>
+        </div>
+    </div>
+    <footer style="font-size:11px; font-family:Arial; margin-top:30px;">
+        <div class="links mb-3" align="center">
+            <a href="reglogin.in">Conditions of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="reglogin.in">Privacy Notice</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="reglogin.in">Help</a>
+        </div>
+        <div class="links" align="center">
+            &copy1996-2022, Amazon.com, Inc. or its affiliates
+        </div>
+    </footer>
+</body>
+</html>
