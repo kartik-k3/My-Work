@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please stop</title>
+    <link rel="stylesheet" href="../src/styles/dontclick.css">
+    <style>
+        button{
+            border: none;
+            background-color: black;
+            height: 100px;
+            width: 100px;
+        }
+        button:hover::before{
+            content: '';
+            display: none;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction:column; justify-content:space-evenly ; ">
+    <div class="content">
+        <h1>You destroyed the button by pressing it so many times</h1>
+    </div>
+    <div>
+        <center>
+            <a href="./dontclick4.html">
+                <button></button>
+            </a>
+        </center>
+    </div>
+    <p style="font-size: 12px;">Dont use dev tools(inspect element) because there is no hidden button</p>
+</body>
+</html>
