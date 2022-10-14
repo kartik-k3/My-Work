@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home of Super Mario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/mario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap" rel="stylesheet">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAACP0P0AAAAAAKXe/gCX2P8AAgAAAJvY/wBfqfEAk9b9AJze/wCf3v8AqN7/AKne/wATIzMAnLrQAAEdLACDwv0AltP+AFuo7QCn3P0AjtT8ALe7vACb2f4Ac7r8AHW6/AAfKTMADSAsAK2zsgACITIAnNz+AMbDvgCMy/0Antz+AGix9QA+dZ8An9z+AJTT/wBiqfMAnt/+AJ/f/gBgqO4AAAEAAGSv8wB7ufcAqN/+AJbc/wCa2f8AVm+GAJvZ/wB4uv0AjMv+AJjU/QAQDg0Aodz/AHK5+AAHJj4ApNz/AJDS+wCj3/8Amtr9AKbf/wCQ0f4AAQEBAHi18wCu4PwAkdf+AKDd/QCi3f0AxsnIAJTX/gAaP1sApN39AG2k0QBxp9kAfMH7AI+RkQAEDRoAnNr+AJrd/gBipt0AldT/ACFGaQAFDBUAptr+ALC2tQCl3f4Apt3+AG219QCn3f4ACjFCAJnX/wCBwvkAmtf/AJna/wCb2v8AnNr/APX9/ACR2P0AY6vxAGa28wCl2/wAnd3/AIfP/gCe3f8Al9X9AKPd/wCk3f8Apd3/AAACAQD8//8AAQIBAKzd/wCs4fwAntv9AAABBAADIzEAabD0AKPY/QAHAgEAk9X+AH69+AAAAAcAldX+AKXe/QBdpvAAfLzzAJrY/gApKyoAjtL/ADdpnQCb2/4ATWZ7AHa8/ACh2/4AepSuAIXF+wCj2/4Ah8X7AKHe/gBlZ2cAe8P5AKPe/gCZ1f8ApN7+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVwICVwJqcDI4jSJmiQJXAjs7OwI5ZgWIWoZkiYkCalcCAmpCNAlNYBMHOmZGhIcCAlcQTkdFNhsOclhQSD4yYwICIoAlJiYJZGRkLCEqL1cCAmpcCAlkZBwcXAN2HkxXOzsmXhw6XWd5RCMAf0+BajtXiX0xDzAXFoNJi2UVLVdGhT09fHMnexFhYnc9PYI3QW0BAWtWKQYkIDV1AQEodDsBPUoEWVsQPE9AcQEUPVJVPUNsflRpjoyMHz2KXx1uV3gzUw1XOwI7AmguBBoYEgs/URkKCjs7AgI7CwxLb3oCAjs7OwICAgICAgICOzsKagJXV1cCegJXV1cCKwICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
+    <style>
+       
+    </style>
+</head>
+<body class="container-fluid">
+    <header>
+        <div class="header1">
+            <a href="https://www.nintendo.com/">
+                <img src="https://media.nintendo.com/share/nclood/stable/en-us/modules/micro-nav/images/nintendo-racetrack.svg" width="97px" height="24px">
+            </a>
+            <button data-bs-target="#login" data-bs-toggle="modal" class="btn"><font color="white"><span class="bi bi-person-fill color"></span>Log in/Sign up</font></button>
+            <div class="modal fade" id="login">
+                 <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Login</h3>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input class="form-control mb-3" type="text" placeholder="username">
+                            <input class="form-control mb-3" type="password" placeholder="password">
+                            <p style="font-size: 10px; color:gray;">*We are not responsible for any phishing activites. But you can totally trust us ;)</p>
+                        </div>
+                        <div class="modal-footer d-flex">
+                            <button data-bs-dismiss="modal" class="btn btn-success">Login</button>
+                            <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="header2">
+                <button class="bttn">Home</button>
+                <button class="bttn">Mario History</button>
+                <button class="bttn">Characters</button>
+                <button class="bttn">News</button>
+            </div>
+            <img style="border: 1px solid black;" src="https://i.ibb.co/0MPg9Zk/capturika.png" width="87px" height="87px">
+        </div>
+    </header>
+    <section style="position: relative;">
+        <div class="tilt1" >
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="carousel carousel-fade" id="banner" data-bs-ride="carousel">
+            <div style="z-index: -1;" class="carousel-inner">
+                <div style="background-image: url(https://mario.nintendo.com/static/21c670be97db0b5722ef5ce03da6e5e1/slide-mpss.jpg); height: 600px; width: 1440px;" class="carousel-item active" data-bs-interval="2000">
+                    <img src="https://mario.nintendo.com/static/d7b167bc2dd3eb917143e5cf8e964237/e30b6/slide-mpss.png">
+                    <img style="position: relative; left: 300px;" src="https://mario.nintendo.com/static/908b49b78a35561f154527804283c517/slide-mpss-0.png"  height="500" width="505">
+                </div>
+                <div style="background-image: url(https://mario.nintendo.com/static/9f35da3970a14eb3708e3d7c9693ace2/slide-smk8d.jpg); background-repeat: no-repeat; background-size: 1440px 768px;" class="carousel-item" data-bs-interval="2000">
+                    <img src="https://mario.nintendo.com/static/f4364780897e95449b760a86756cc844/e30b6/slide-smk8d.png">
+                    <img style="position: relative; left: 150px;" src="https://mario.nintendo.com/static/f53adf98ea95d207728544b86633161a/slide-smk8d-2.png" height="600" width="600" >
+                </div>
+                <div style="background-image: url(https://mario.nintendo.com/static/21c670be97db0b5722ef5ce03da6e5e1/slide-mpss.jpg);  height: 600px; width: 1440px;" class="carousel-item" data-bs-interval="2000">
+                    <img src="https://mario.nintendo.com/static/e9044ddc904e6538aa6c73f783c6579c/e30b6/slide-sm3dwbf.png">
+                    <img style="position: relative; left: 300px;" src="https://mario.nintendo.com/static/0088b62c035bb343341b38bffb598deb/slide-sm3dwbf-3.png"  height="500" width="300">
+                </div>
+                <div style="background-image: url(https://mario.nintendo.com/static/9b633f02b38669e4a84bf0b1abbeed3c/slide-msbl.jpg); background-repeat: no-repeat; background-size: 1440px 600px;" class="carousel-item" data-bs-interval="2000">
+                    <img src="https://mario.nintendo.com/static/7394699b9408f54c990a0eb0399e06d1/e30b6/slide-msbl.png">
+                    <img style="position: relative; left: 50px;" src="https://mario.nintendo.com/static/b107a8fa25fda47b0ad31be9fb6f97f9/slide-msbl-2.png" height="600" width="600">
+                </div>
+            </div>
+            <div class="carobtn" id="carobtn">
+                <button data-bs-slide="prev" data-bs-target="#banner" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-slide="next" data-bs-target="#banner" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <div class="carousel-indicators" style="background-color: rgba(33,37,41,0.4);">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banner"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banner"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banner"></button>
+                <button data-bs-slide-to="3" data-bs-target="#banner"></button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content1">
+            <h1><center>Mario in the news</center></h1>
+            <div class="d-flex justify-content-between">
+                <div class="card">
+                    <div class="shade">
+                        <div class="card-header">
+                            <img src="https://assets.nintendo.com/image/upload/dpr_auto/q_auto/f_auto/c_pad,w_307/ncom/en_US/articles/2022/mobilenews-roar-its-the-bowser-tour/N.com_Bowser_Tour_0824">
+                        </div>
+                        <div class="card-body">
+                            <p>08.24.2022</p>
+                            <p>ROAR! Its the Bowser tour!</p><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="shade">
+                        <div class="card-header">
+                            <img src="https://assets.nintendo.com/image/upload/dpr_auto/q_auto/f_auto/c_pad,w_307/ncom/en_US/articles/2022/mobilenews-here-we-go-the-mario-vs-luigi-tour-is-on-now/N.com_Mario_vs._Luigi_Tour_0907">
+                        </div>
+                        <div class="card-body">
+                            <p>09.07.2022</p>
+                            <p>Here we go! The Mario vs. Luigi<br> Tour is on now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="shade">
+                        <div class="card-header">
+                            <img src="https://assets.nintendo.com/image/upload/dpr_auto/q_auto/f_auto/c_pad,w_307/ncom/en_US/articles/2022/celebrate-three-years-of-mario-kart-tour-with-the-globe-trotting-anniversary-tour/N.com_Anniversary_Tour_0921">
+                        </div>
+                        <div class="card-body">
+                            <p>09.21.2022</p>
+                            <p>Celebrate three years of mario kart tour<br> with the globe trotting anniversary tour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section  class="content2">
+        <div class="wave1">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div style="background-image:url(https://mario.nintendo.com/static/pattern-logos-characters-bd1f26898b2027c98ce8ba17c084f523.png); padding: 200px 100px 200px 100px;" class="d-flex justify-content-center align-items-center">
+            <div>
+                <img loading="lazy" src="https://mario.nintendo.com/static/b2df5b31e1a74a11b1d9c87e4819c263/8c3c2/video-button.jpg" width="875px" height="492px">
+                <center><h1 style="font-size:20px;"><br>Mario Kart 8 Deluxe – Booster Course Pass</h1>
+                    <p style="color:white;font-size:16px;">48 remastered courses are racing to the Mario Kart 8 Deluxe Game as paid DLC!</p></center>
+            </div>
+        </div>
+        <div class="wave2">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <div style="background-color: #e60012; padding: 75px 70px;">
+            <div style="position: absolute;">
+                <img src="https://mario.nintendo.com/static/fd723b2893d4d2b39ef71bfdb4e3329c/579b4/mario-background.png" width="662px" height="958px" style="position: absolute; left: 550px; top: -100px;">
+                <img loading="lazy" src="https://mario.nintendo.com/static/2a0f3e0a9dded61fa2636e9d4427a502/75015/star.png" width="230px" height="219px" style="position: absolute; left: 1000px;">
+            </div>
+            <div>
+                <h1>Featured<br>products<br><br></h1>
+                <div class="d-flex justify-content-between">
+                    <div class="card position-relative" style="height: 420px; bottom: 50px;">
+                        <div class="shade">
+                            <div loading="lazy" class="card-header-tabs">
+                                <img src="https://mario.nintendo.com/static/e9870013c0868b85c0f2f50e57001524/a07a5/main.jpg" width="360px">
+                            </div>
+                            <div class="card-body">
+                                <p>Mario Strikers</p>
+                                <p>Tackle, Pass and score a Strike, a 5-on-5<br> sport where anything goes!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="shade">
+                            <div class="card-header">
+                                <img loading="lazy" src="https://mario.nintendo.com/static/da461712052080050f3c9ad358497ca2/98c57/product-mario-party.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p>Mario Party&#8482; Superstars</p>
+                                <p>Calling all superstars! Mario Party™ is<br> back with 5 classic boards from the<br> Nintendo 64™ Mario Party games.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="shade">
+                            <div class="card-header">
+                                <img loading="lazy" src="https://mario.nintendo.com/static/55404fab706dd21dd2917f8ab5fecf97/98c57/product-mario-golf.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p>Mario Golf&#8482;:Super Rush</p>
+                                <p>Tee off with family and friends in this content-packed Mario Golf game.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="card">
+                        <div class="shade">
+                            <div class="card-header">
+                                <img loading="lazy" src="https://mario.nintendo.com/static/884f0447aa8283bcbbf9408c5baab500/98c57/product-super-mario-3d-world-bf.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p>Super Mario 3D World</p>
+                                <p>Enjoy 2 Mario adventures in one—a platformer with lively multiplayer + a bonus adventure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="shade">
+                            <div class="card-header">
+                                <img loading="lazy" src="https://mario.nintendo.com/static/508e296f555943b9f5fa7581d4690507/98c57/product-mk-live-home-circuit.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p>Mario Kart Live: Home Circuit</p>
+                                <p>Bring the fun of the Mario Kart™ series into the real world!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="shade">
+                            <div class="card-header">
+                                <img loading="lazy" src="https://mario.nintendo.com/static/be27fbe2f403f5294fb7d37c35badbb4/98c57/product-lego.jpg">
+                            </div>
+                            <div class="card-body">
+                                <p>LEGO® Super Mario™</p>
+                                <p>Two iconic worlds—together at last!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content3">
+        <div class="wave3">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div style="background-image:url(https://mario.nintendo.com/static/pattern-logos-characters-bd1f26898b2027c98ce8ba17c084f523.png); padding: 200px 150px 200px 150px;">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="card">
+                    <div class="card-body d-flex">
+                        <img loading="lazy" class="card1" style="height:152px; width:141px; top: 100px;" src="https://mario.nintendo.com/static/a42e88d5f24f15c356ce598854021e69/f5f11/character-1.png">
+                        <img loading="lazy" class="card1" style="width:255px; height: 284px; bottom: 170px;left: 160px;" src="https://mario.nintendo.com/static/ea3e60c7d54589acd81184b63ed79f85/45887/character-2.png">
+                        <img loading="lazy" class="card1" style="width:77px; height: 77px; left: 320px; top: 130px;" src="https://mario.nintendo.com/static/c3dae4617cec36bb6591b8f935bd7b21/e49c4/character-3.png">
+                    </div>
+                    <div class="card-footer">
+                        <p>Learn all about Mario's adventures through the years.</p>
+                    </div>
+                </div>
+                <div class="card position-relative" style="bottom: 100px;">
+                    <div class="card-body">
+                        <center><img loading="lazy" style="width: 312px; height:339px; position:relative; bottom: 100px;" src="https://mario.nintendo.com/static/1c2cdea3e7189a6b9e8d7171c6aa261a/2f663/characters.png"></center>
+                    </div>
+                    <div class="card-footer">
+                        <p>From ravishing royalty to menacing monsters, mus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="card">
+                    <div class="card-body">
+                        <center><img loading="lazy" style="width: 410px; height:410px; position:relative; bottom: 90px;" src="https://mario.nintendo.com/static/d7378a5eb59953683a16bbc93ec6fba0/cbcb2/characters.png"></center>
+                        <p style="margin-top: -30px;">Visit marios page at Nintendo.com</p>
+                    </div>
+                </div>
+                <div class="card position-relative" style="bottom: 100px;">
+                    <div class="card-body">
+                        <center><img loading="lazy" style="width: 323px; height:323px; position:relative; bottom: 70px;" src="https://mario.nintendo.com/static/a471475d3c117156d380bcea53318f09/46c6d/products-burst.png"></center>
+                    </div>
+                    <div class="card-foter">
+                        <p>&nbsp Visit Nintendo Store, Find Mario-themed apparel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tilt2">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <footer>
+        <div style="color: white;" class="content1">
+            <center><button class="bg-white text-dark" style="border-radius: 10px;">Customer support ></button></center>
+            <div id="footerimg" class="d-flex justify-content-center align-items-center">
+                <div>
+                    <p>Follow Mario:</p>
+                    <div class="d-flex">
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-github"></span>
+                        <span class="bi bi-youtube"></span>
+                        <span class="bi bi-instagram"></span>
+                    </div>
+                </div>
+                <img loading="lazy" src="https://media.nintendo.com/share/nclood/stable/en-us/modules/footer/images/esrb-icons/en-e-e10.svg" width="135px" height="90px">
+                <img loading="lazy" src="https://media.nintendo.com/share/nclood/stable/en-us/modules/footer/images/logo-esrb-privacy-certified.svg" width="66px" height="90px">
+            </div>
+            <div>
+                <center>
+                    <br><p>Privacy policy | Terms of use | Cookie Preferences | Interest Based Ads</p>
+                    <p style="font-size: 10px;">Game trademarks and copyrights are properties of their respective owners. Nintendo properties are trademarks of Nintendo. © 2020 Nintendo.</p>
+                </center>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
