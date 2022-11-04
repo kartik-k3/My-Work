@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script>
+        var i=3;
+        function register(){
+            if(i<1){
+                document.getElementById("lblpin").innerHTML="Your card is blocked";
+            }
+            var pin=document.getElementById("pintext").value;
+            while(i>0){
+                if(pin!=1234){
+                    document.getElementById("lblpin").innerHTML= "You have "+i+" attempts left";
+                    i--;
+                    return;
+                }
+                else{
+                    document.getElementById("lblpin").innerHTML="You have successfully logged in";
+                    return;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" class="form-control w-25 mt-5" id="pintext" pattern="[0-9]{4}">
+    <p id="lblpin">Please enter your 4 digit pin</p>
+    <button class="btn btn-primary" onclick="register()">register</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        div.card-header img{
+            width: 400px;
+        }
+        div.card{
+            margin: 50px;
+        }
+    </style>
+    <script>
+        function orderplaced(){
+            document.getElementById("lblName").innerHTML = document.getElementById("custname").value;
+            document.getElementById("lblNo").innerHTML = document.getElementById("mobno").value;
+
+            var meal = document.getElementById("omgburg");
+            var tot = 0;
+
+            if(meal.checked){
+                document.getElementById("lblmeal").innerHTML=meal.value;
+                tot = tot+120;
+            }
+            else{
+                document.getElementById("lblmeal").innerHTML= document.getElementById("omgp").value;
+                tot=tot+160;
+            }
+            var pepsi=document.getElementById("pepsi");
+            var choco=document.getElementById("choco");
+            var adonname="";
+            if(pepsi.checked){
+                adonname = pepsi.value;
+                tot=tot+60;
+            }
+            if(choco.checked){
+                adonname= adonname +" "+ choco.value;
+                tot=tot+90;
+            }
+
+            document.getElementById("lbladons").innerHTML=adonname;
+            document.getElementById("lbltot").innerHTML=tot;
+        }
+    </script>
+</head>
+<body style="background-color:maroon; color: white;">
+    <section>
+        <div>
+            <img src="https://images.ctfassets.net/wtodlh47qxpt/4gztBB8yAvtp6jV7JAuLD/093fddbb77a78a44a4d3d5e066c592de/KFC_Peri_Peri_Banner__1440x396px.jpg?w=1366&fit=fill&fm=webp">
+        </div>
+        <div>
+            <div class="accordion" id="orderform">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn btn-danger w-100" data-bs-target="#customer" data-bs-toggle="collapse">Customer Details</button>
+                    </div>
+                    <div class="accordion-collapse collapse show" id="customer" data-bs-parent="#orderform">
+                        <div class="accordion-body">
+                            <dl>
+                                <dt>
+                                    Customer Name
+                                </dt>
+                                <dd>
+                                    <input type="text" class="form-control" id="custname">
+                                </dd>
+                                <dt>
+                                    Mobile
+                                </dt>
+                                <dd>
+                                    <input type="number" class="form-control" id="mobno">
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn btn-danger w-100" data-bs-target="#mealdetails" data-bs-toggle="collapse">Select your meal</button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="mealdetails" data-bs-parent="#orderform">
+                        <div class="accordion-body d-flex justify-content-between">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=21.38">
+                                </div>
+                                <div class="card-body">
+                                    <h1>OMG chicken</h1>
+                                </div>
+                                <div class="card-footer">
+                                    <h2>
+                                        <input type="radio" id="omgburg" class="form-check-input" value="OMG chicken" name="meal">&#8377; 120/- 
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT200.jpg?ver=21.38">
+                                </div>
+                                <div class="card-body">
+                                    <h1>POP bowls</h1>
+                                </div>
+                                <div class="card-footer">
+                                    <h2>
+                                        <input type="radio" class="form-check-input" id="omgp" value="OMG POP BOWL" name="meal">&#8377; 160/- 
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn btn-danger w-100" data-bs-target="#adons" data-bs-toggle="collapse">Select your AD ons</button>
+                    </div>
+                    <div class="accordion-collapse collapse" id="adons" data-bs-parent="#orderform">
+                        <div class="accordion-body d-flex justify-content-between">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K486.jpg?ver=21.38">
+                                </div>
+                                <div class="card-body">
+                                    <h1>
+                                        Pespi
+                                    </h1>
+                                </div>
+                                <div class="card-footer">
+                                    <h2>
+                                        <input type="checkbox" id="pepsi" value="pepsi" name="adon">&#8377; 60/- 
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-K701.jpg?ver=21.38">
+                                </div>
+                                <div class="card-body">
+                                    <h1>
+                                        Choco-Lava
+                                    </h1>
+                                </div>
+                                <div class="card-footer">
+                                    <h2>
+                                        <input type="checkbox" id="choco" value="Choco-Lava" name="adon">&#8377; 90/- 
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger w-100" data-bs-target="#order" data-bs-toggle="modal" onclick="orderplaced()">Place Order</button>
+            <div class="modal fade" id="order">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-primary">
+                            <h1>Your bill summary</h1>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <dl class="row">
+                                <dt class="col-3">Customer</dt>
+                                <dd class="col-9" id="lblName"></dd>
+                                <dt class="col-3">Mobile No.</dt>
+                                <dd class="col-9" id="lblNo"></dd>
+                                <dt class="col-3">Meal Name</dt>
+                                <dd class="col-9" id="lblmeal"></dd>
+                                <dt class="col-3">Ad on's</dt>
+                                <dd class="col-9" id="lbladons"></dd>
+                                <dt class="col-3">Total</dt>
+                                <dd class="col-9" id="lbltot"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

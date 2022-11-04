@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        #row div{
+            margin: 5px 0px;
+        }
+    </style>
+    <script>
+        function register(){
+            document.getElementById("lblname").innerHTML=document.getElementById("custname").value;
+            document.getElementById("lblcheckin").innerHTML=document.getElementById("bookdate").value;
+            document.getElementById("lblnodays").innerHTML=document.getElementById("nodays").value;
+            document.getElementById("lblnoper").innerHTML=document.getElementById("nopers").value;
+
+            var room1 = document.getElementById("delux");
+            var total = 0;
+
+            if(room1.checked){
+                document.getElementById("lblroom").innerHTML=room1.value;
+                total=total+2500;
+            }
+            else{
+                document.getElementById("lblroom").innerHTML="Suite Room";
+                total=total+4000;
+            }
+            
+            var ac=document.getElementById("ac");
+            var lock=document.getElementById("lock");
+            var amens="";
+
+            if(ac.checked){
+                amens=ac.value;
+                total=total+1000;
+            }
+            if(lock.checked){
+                amens=" "+lock.value;
+                total=total+300;
+            }
+
+            document.getElementById("lblamen").innerHTML=amens;
+
+            var advamt=document.getElementById("advamt").value;
+            document.getElementById("lbladv").innerHTML= advamt;
+            var nopers=document.getElementById("nopers").value;
+
+            if(nopers>2){
+                nopers=nopers-2;
+                nopers=nopers*1000;
+                total=total+nopers;
+            }
+
+            total=total*document.getElementById("nodays").value;
+            var bal=total-advamt;
+            document.getElementById("lblbal").innerHTML=bal;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Hotel registeration form</h1>   
+        </center>
+    </header>
+    <div class="accordion" id="orderform">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#custinfo" data-bs-toggle="collapse">Customer Info</button>
+            </div>
+            <div class="accordion-collapse collapse show" id="custinfo" data-bs-parent="#orderform">
+                <div id="row" class="row">
+                    <div class="col-3">Customer Name</div>
+                    <div class="col-9"><input type="text" class="form-control" id="custname"></div>
+                    <div class="col-3">Check in Date</div>
+                    <div class="col-9"><input type="date" class="form-control" id="bookdate"></div>
+                    <div class="col-3">Total number of days</div>
+                    <div class="col-9"><input type="text" pattern="[0-9]{1,10}" class="form-control" id="nodays"></div>
+                    <div class="col-3">Total number of persons</div>
+                    <div class="col-9"><input type="text" pattern="[0-9]{1,10}" class="form-control" id="nopers"></div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#roomtype" data-bs-toggle="collapse">Select Room Type</button>
+            </div>
+            <div class="accordion-collapse collapse show d-flex justify-content-between" id="roomtype" data-bs-parent="#orderform">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg" width="600" height="300">
+                    </div>
+                    <div class="card-body">
+                        <h3>Delux room</h3>
+                    </div>
+                    <div class="card-footer">
+                        <input type="radio" class="form-check-control" value="Delux room" id="delux" name="room"><h4>2500</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://www.contemporist.com/wp-content/uploads/2016/12/modern-bedroom-layout-131216-1051-19-800x547.jpg" width="600" height="300">
+                    </div>
+                    <div class="card-body">
+                        <h3>Suite room</h3>
+                    </div>
+                    <div class="card-footer">
+                        <input type="radio" class="form-check-control" value="Suite room" id="suite" name="room"><h4>4000</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#amenities" data-bs-toggle="collapse">Select Amenities</button>
+            </div>
+            <div class="accordion-collapse collapse show d-flex justify-content-between" id="amenities" data-bs-parent="#orderform">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://static01.nyt.com/images/2016/08/10/science/10airconditioner/10airconditioner-videoSixteenByNineJumbo1600.jpg?year=2016&h=900&w=1600&s=ff944407eb935e379548283cee1231b09cbd745b431bab5b4c39939111daadd2&k=ZQJBKqZ0VN&tw=1" width="600" height="300">
+                    </div>
+                    <div class="card-body">
+                        <h3>A/C</h3>
+                    </div>
+                    <div class="card-footer">
+                        <input type="checkbox" class="form-check-control" value="A/C" id="ac"><h4>1000</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://c8.alamy.com/comp/FFEPPA/monkey-sitting-on-top-of-a-locker-monkey-island-cat-ba-vietnam-FFEPPA.jpg" width="600" height="300">
+                    </div>
+                    <div class="card-body">
+                        <h3>Locker</h3>
+                    </div>
+                    <div class="card-footer">
+                        <input type="checkbox" class="form-check-control" value="Locker" id="lock"><h4>300</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#advanceamount" data-bs-toggle="collapse">Advance Amount</button>
+            </div>
+            <div class="accordion-collapse collapse show" id="advanceamount" data-bs-parent="#orderform">
+                <center>
+                    <div class="row">
+                        <div class="col-6"><h3>Advance Amount</h3></div>
+                        <div class="col-6"><input type="number" required id="advamt"></div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <center>
+        <button class="btn btn-dark" onclick="register()" style="width: 150px;">register</button>
+    </center>
+    <hr>
+    <div>
+        <div class="row">
+            <div class="col-3">Customer Name : </div>
+            <div class="col-9" id="lblname"></div>
+            <div class="col-3">Check In Date : </div>
+            <div class="col-9" id="lblcheckin"></div>
+            <div class="col-3">Total No. of days : </div>
+            <div class="col-9" id="lblnodays"></div>
+            <div class="col-3">Total No. of Persons : </div>
+            <div class="col-9" id="lblnoper"></div>
+            <div class="col-3">Room Type : </div>
+            <div class="col-9" id="lblroom"></div>
+            <div class="col-3">Amenities : </div>
+            <div class="col-9" id="lblamen"></div>
+            <div class="col-3">Advance Amount : </div>
+            <div class="col-9" id="lbladv"></div>
+            <div class="col-3">Balance Amount : </div>
+            <div class="col-9" id="lblbal"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
