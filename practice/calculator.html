@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #424c55;
+        }
+        #body button{
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            border-radius: 100%;
+        }
+    </style>
+    <script>
+        var number=0;
+        var count=1;
+        var revNumber=0;
+        function bodyload(){
+            document.getElementById("lblcalc").focus();
+        }
+        function numclick(num){
+            if(num==6){
+                while (number > 0) {
+                revNumber = (revNumber * 10) + (number % 10);
+                number = Math.floor(number / 10);
+                console.log(revNumber);
+                return;
+            } 
+            }
+            num=num*count; 
+            count=count*10;
+            number=number+num;
+            console.log(number);
+        }
+        
+    </script>
+</head>
+<body id="body" onload="bodyload()">
+    <input type="text" class="form-control-lg w-100 mt-3 mb-3" id="lblcalc">
+    <div class="row">
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(1)">1</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(2)">2</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(3)">3</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(a)">+</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(4)">4</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(5)">5</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(6)">6</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(s)">-</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(7)">7</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(8)">8</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(9)">9</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(x)">X</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(0)">0</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(p)">.</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick(d)">/</button></div>
+        <div class="col-3"><button class="btn btn-dark" onclick="numclick('e')">=</button></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

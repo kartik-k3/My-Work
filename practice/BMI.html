@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        div.calc{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 0px;
+        }
+        div.calc div{
+            margin-bottom: 20px;
+        }
+        div.calc div p{
+            border: 1px solid black;
+            width: 100px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        var categories=[];
+        var count=-1;
+        const calclick =() =>{
+            count++;
+            var name=document.getElementById("inpname").value;
+            var age=document.getElementById("inpage").value;
+            var height=document.getElementById("inpheight").value;
+            var weight=document.getElementById("inpweight").value;
+            var content=[name,age,height,weight];
+            height=height/100;
+            height=height*height;
+            bmi=weight/height;
+            bmi=toFixed(bmi,2);
+            content.push(bmi);
+            document.getElementById("inpname").value=" ";
+            document.getElementById("inpage").value=" ";
+            document.getElementById("inpheight").value=" ";
+            document.getElementById("inpweight").value=" ";
+            categories.push(content);
+            if(bmi>35){
+                document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are fat`;
+            }else if(bmi<20){
+                document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are salim`;
+            }else{
+                document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are fit`;
+            }
+            
+        }
+        const histclick=()=>{
+            if(count<0){
+                document.getElementById("msg").innerHTML="No records";
+                return;
+            }
+            document.getElementById("msg").innerHTML="";
+            for(var item of categories){
+                for(i=0;i<=4;i++){
+                    const division=document.createElement("p");
+                    const node=document.createTextNode(item[i]);
+                    division.appendChild(node);
+                    const element = document.getElementById("msg");
+                    element.appendChild(division);
+                    // document.write(item[i]);
+                }
+            }
+        }
+        function toFixed(num, fixed) {
+        var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
+        return num.toString().match(re)[0];
+        }
+        const wgthchange=()=>{
+            var weight=document.getElementById("inpweight").value;
+            document.getElementById("lblweight").innerHTML=`${weight} kgs`;
+        }
+        const heightchange=()=>{
+            var height=document.getElementById("inpheight").value;
+            document.getElementById("lblheight").innerHTML=`${height} cm`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <center>
+            <h1>
+                Body Mass Index
+            </h1>
+        </center>
+    </header>
+    <section>
+        <div class="calc">
+            <div class="d-flex">
+                <span>Enter your name: </span>
+                <input type="text" required class="form-control w-25" id="inpname">&emsp;
+                <span>Enter your age: </span> 
+                <input type="text" pattern="[0-9]" required class="form-control w-25" id="inpage">
+            </div>
+            <div>
+                <span class="d-flex">Input height cm:&nbsp;<p id="lblheight">160 cm</p></span>
+                <input type="range" id="inpheight" onchange="heightchange()" class="form-range w-25" value="160" min="30" max="250">
+            </div>
+            <div>
+                <span class="d-flex">Input weight kg:&nbsp;<p id="lblweight">60 kgs</p></span>
+                <input type="range" id="inpweight" onchange="wgthchange()" class="form-range w-25" value="60" min="20" max="250">
+                <button class="btn" style="margin-left:1200px;" data-bs-target="#hist" data-bs-toggle="modal" onclick="histclick()">history</button>
+                <div class="modal fade" id="hist">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>history</h1>
+                            </div>
+                            <div class="modal-body" style="color: black;">
+                                <div id="lblhist" class="row">
+                                    <div id="msg"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <button class="btn btn-primary mt-2" onclick="calclick()">Calculate</button>
+            <h1 id="lblbmi"></h1>
+        </center>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
