@@ -41,10 +41,10 @@
             document.getElementById("inpheight").value=" ";
             document.getElementById("inpweight").value=" ";
             categories.push(content);
-            if(bmi>35){
+            if(bmi>32){
                 document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are fat`;
-            }else if(bmi<20){
-                document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are salim`;
+            }else if(bmi<15){
+                document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are flat`;
             }else{
                 document.getElementById("lblbmi").innerHTML=`Your BMI is ${bmi} you are fit`;
             }
