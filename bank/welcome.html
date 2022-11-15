@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/styles/bank.css">
+    <style>
+        div.buttongrid{
+            display: grid;
+            grid-row: 2;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+        div.buttongrid button{
+            height: 90px;
+            width: 160px;
+            margin: 15px;
+            text-align: left;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body onload="welcbodyload()">
+    <div class="card">
+        <div class="card-body" style="padding: 50px;">
+            <div class="d-flex justify-content-between">
+                <h1 id="lblwelcome"></h1>
+                <a href="./index.html"><button class="btn" style="color: #fe3d00;"><span class="bi bi-arrow-left-circle"></span> LOG OUT</button></a>
+            </div>
+            <div class="buttongrid mt-2">
+                <a href="./transaction.html"><button class="btn" id="subtract" onclick="chgbal(this)" style="background-color: #0c72d7;"><span class="bi bi-cash-stack"></span><br>Withdraw Cash</button></a>
+                <a href="checkbal.html"><button class="btn" onclick="chkbal()" style="background-color: #278795;"><span class="bi bi-wallet2"></span><br>Check Balance</button></a>
+                <a href="./transaction.html"><button class="btn" id="add" onclick="chgbal(this)" style="background-color: #973528;"><span class="bi bi-bank"></span><br>Deposit Cash</button></a>
+                <a href="./changepin.html"><button class="btn" onclick="chgpin()" style="background-color: #1948a4;"><span class="bi bi-credit-card"></span><br>Change Pin</button></a>
+                <a href="./accsettings.html"><button class="btn" id="accset" onclick="settings()" style="background-color: #179981;"><span class="bi bi-gear"></span><br>Acc Settings</button></a>
+                <button class="btn" id="viewset" onclick="settings()" style="background-color: #a84913;"><span class="bi bi-arrow-up-left-circle"></span><br>View Details</button>
+            </div>
+        </div>
+        <div style="background-color: #0c0000; padding: 10px;" class="card-body d-flex justify-content-between">
+            <button style="height: 40px; font-size: 14px;margin: 0%;" class="btn btn-primary"><b>HELP</b></button>
+            <img src="../public/images/atm/logo.PNG">
+        </div>
+    </div>
+    <script src="../src/scripts/bank.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

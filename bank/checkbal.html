@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your balance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/bank.css">
+</head>
+<body onload="checkbaload()">
+    <div class="card">
+        <div class="card-header">
+            <span style="position:absolute; left:75%; bottom :90%;" class="bi bi-calendar2-date" id="lbldate"></span>
+            <div class="card">
+                <div style="background-color:#090305; padding: 25px; padding-top: 30px;" class="card-body">
+                    
+                    <h1>Bank account balance<br> fetched successfully</h1>
+                    <center><h1 style="color: #248e38;" id="lblmoney">60000</h1></center>
+                    <a href="./welcome.html">
+                        <button class="btn" style="color: #fe3d00; border: 1px solid #fe3d00; font-size: 14px;"><span class="bi bi-arrow-left"></span> CANCEL</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #0c0000; padding: 10px;" class="card-body d-flex justify-content-between">
+            <button style="height: 40px; font-size: 14px;margin: 0%;" class="btn btn-primary"><b>HELP</b></button>
+            <img src="../public/images/atm/logo.PNG">
+        </div>
+    </div>
+    <script src="../src/scripts/bank.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

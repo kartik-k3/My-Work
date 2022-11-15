@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/bank.css">
+    <style>
+        div #arrow{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+       #card1{
+        margin-left: 44px;
+        margin-top: 20px;
+        animation: card 2s infinite;
+       }
+
+       @keyframes card{
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(15px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div style="margin-right: 100px;">
+                <h1 style="font-size: 60px;">
+                    Welcome
+                </h1>
+                <p style="font-size: 30px;">To begin using this<br> ATM's services,<br> please insert your<br> card <br><br></p>
+                <button style="border: 1px solid #1c2529;" data-bs-target="#QR" data-bs-toggle="modal" class="btn"><span class="bi bi-qr-code"> ACCESS USING PHONE</span></button>
+                <div class="modal fade" id="QR">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 style="color: black;">Scan here</h1>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../public/images/atm/scan this.png" align="center" width="150px" height="150px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="background-color:#685c5c;width: 200px; border-radius: 15px;">
+                    <center>
+                        INSERT CARD FACING UP
+                    </center>
+                </div>
+                <span id="arrow" class="bi bi-triangle-fill"></span>
+                <a href="./pin.html"><img id="card1" src="../public/images/atm/card1-removebg-preview.png"></a>
+            </div>
+        </div>
+        <div style="background-color: #0c0000; padding: 10px;" class="card-body d-flex justify-content-between">
+            <a href="./pin.html"><button style="height: 40px; font-size: 14px;margin: 0%;" class="btn btn-primary"><b>NEXT</b></button></a>
+            <img src="../public/images/atm/logo.PNG">
+        </div>
+    </div>
+    <script src="../src/scripts/bank.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

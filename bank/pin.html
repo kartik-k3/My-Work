@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter pin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles/bank.css">
+    <style>
+        #card2{
+            position: relative;
+            bottom: 50px;
+            left: 20px;
+        }
+        #lblcard{
+            background-color: #04080b;
+            padding: 20px;
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="card">
+                <div id="lblcard" class="card-header justify-content-center align-content-center">
+                    <div>
+                        <div >
+                            <img id="card2" src="../public/images/atm/card2-removebg-preview.png">
+                            <input style="background-color: #161616; width: 170px;" class="btn" type="password"  id="inppin" onchange="inppinchange()" onkeyup="inppinchange()" maxlength="4" pattern="[0-9]{4}">
+                        </div>
+                        <div style="position: relative; top:100px;">
+                            <a href="./index.html">
+                                <button class="btn" style="color: #fe3d00; border: 1px solid #fe3d00; font-size: 14px;"><span class="bi bi-arrow-left"></span> CANCEL</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="bi bi-arrow-left me-4 ms-4"></span>
+                <div style="width: 210px; height: 210px;" class="row mb-5">
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(1)">1</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(2)">2</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(3)">3</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(4)">4</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(5)">5</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(6)">6</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(7)">7</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(8)">8</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(9)">9</button></div>
+                    <div class="col-4"><button class="btn btn-dark" onclick="numclick(0)">0</button></div>
+                    <diiv class="col-8"><button style="width: 115px; height: 50px;" class="btn btn-dark mt-2" onclick="numclick('c')">CLEAR</button></diiv>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #0c0000; padding: 10px;" class="card-body d-flex justify-content-between">
+            <a href="./pin.html"><button style="height: 40px; font-size: 13px;margin: 0%;" class="btn btn-primary"><b>NEXT</b></button></a>
+            <p style="color: gray; margin-top: 10px;" id="lblnote">Note: The pin you enter will be set as your pin</p>
+            <img src="../public/images/atm/logo.PNG" width="110px">
+        </div>
+    </div>
+    <script src="../src/scripts/bank.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
