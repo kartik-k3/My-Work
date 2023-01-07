@@ -33,6 +33,8 @@
             var content=[name,age,height,weight];
             height=height/100;
             height=height*height;
+            console.log(height);
+            console.log(content[2]);
             bmi=weight/height;
             bmi=toFixed(bmi,2);
             content.push(bmi);
@@ -65,6 +67,9 @@
                     element.appendChild(division);
                     // document.write(item[i]);
                 }
+                const line = document.createElement("hr");
+                const element = document.getElementById("msg");
+                element.appendChild(line);
             }
         }
         function toFixed(num, fixed) {
@@ -104,7 +109,7 @@
             <div>
                 <span class="d-flex">Input weight kg:&nbsp;<p id="lblweight">60 kgs</p></span>
                 <input type="range" id="inpweight" onchange="wgthchange()" class="form-range w-25" value="60" min="20" max="250">
-                <button class="btn" style="margin-left:1200px;" data-bs-target="#hist" data-bs-toggle="modal" onclick="histclick()">history</button>
+                <button class="btn" style="margin-left:100px;" data-bs-target="#hist" data-bs-toggle="modal" onclick="histclick()">history</button>
                 <div class="modal fade" id="hist">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -113,8 +118,9 @@
                             </div>
                             <div class="modal-body" style="color: black;">
                                 <div id="lblhist" class="row">
-                                    <div id="msg"></div>
+                                    <div id="msg">
 
+                                    </div>
                                 </div>
                             </div>
                         </div>

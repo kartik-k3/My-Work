@@ -1,5 +1,4 @@
 notes.txt
-node_modules
 sass
 practice/wave.html
 practice/practice.html
@@ -8,3 +7,4 @@ src/styles/bank.css.map
 practice/array.html
 practice/examprac.html
 src/scripts/practice.js
+node_modules/
