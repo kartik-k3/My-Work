@@ -275,3 +275,148 @@ button {
 a {
     text-decoration: none
 }
+marquee img{
+    width:135px;
+    height: 75px;
+}
+header.mhead{
+    background-color: #000a2d;
+}
+@media screen and (min-width:435px){
+    header.mhead{
+        display:none;
+    }
+    div.headpara{
+        width: 50%;
+    }
+    .homehead{
+        color:#002d5b;
+        font-size: 70px;
+        font-family: georgia;
+        margin: 40px 0px 20px 0px
+    }
+}
+@media screen and (max-width:433px){
+    header.lappyhead{
+        display: none;
+    }
+    header.mhead{
+        display: block;
+        position:fixed;
+        width: 100%;
+        position: relative;
+    }
+    header div{
+        flex-direction: column;
+    }
+    header ol li,a{
+        color: white;
+    }
+    div.home{
+        margin: 0px;
+        
+    }
+    div.homechange p,h1,div,form{
+        margin-bottom: 30px;
+    }
+    div.homechange button{
+        width: 120px !important;
+    }
+    div.content2{
+        padding: 0px;
+        margin-top: 20px;
+    }
+    #about{
+        font-size: 30px;
+    }
+    div.con1{
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+        margin-right: 25px !important;
+
+    }
+    div.con1 a{
+        font-size: 25px !important;
+        font-family: Arial !important;
+        color: #000a2d;
+    }
+    div.content1{
+        padding: 0%;
+        flex-direction: column;
+        padding-bottom: 750px;
+    }
+    div.con2{
+        flex-direction: column;
+
+    }
+    #hidden{
+        display: none;
+    }
+    div.card{
+        left: -15px;
+    }
+    #hiddencontent2{
+        display: none;
+        
+    }
+    #mcontent2{
+        display: block !important;
+        height: 100%;
+        width: 100%;
+        padding-top: 250px;
+        color: black;
+    }
+    #mcontent2 a{
+        color: black;
+
+    }
+    #services{
+        font-size: 35px;
+        margin-top: 20px;
+        margin-bottom: -20px !important;
+    }
+    #mcontent2 li{
+        font-size: 19px;
+        font-weight: 600;
+        color: #ec5b53;
+        text-decoration:solid;
+    }
+    div.infcontact {
+        flex-direction: column;
+        padding: 90px 60px;
+        justify-content: center !important;
+    }
+    div.infcontact button{
+        margin: 0px !important;
+    }
+    h1#page{
+        font-size: 35px;
+    }
+    #hiddencard{
+        display: none;
+    }
+    #mcontent4{
+        padding: 0%;
+    }
+    #contentmarq{
+        padding: 0%;
+        margin-top: 30px;
+    }
+    #mcontent5{
+        flex-direction: column;
+        padding: 0%;
+        padding-top: 30px;
+    }
+    #contact{
+        width: 100%;
+    }
+    #mcontent6{
+        width:100% !important;
+    }
+    #btn5{
+        width: 100% !important;
+    }
+    .footerhead a{
+        font-size: 22px !important;
+    }
+}
