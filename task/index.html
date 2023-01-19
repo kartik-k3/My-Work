@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+      
+    </style>
+    <script>
+        var taskList= [];
+        var count = 0;
+        var count1=0;
+        var completed =[];
+        function btnclick(){
+            var task = document.getElementById("textbox").value;
+            taskList.push(task);
+            renderlist();
+            
+        }
+        function renderlist(){
+            var node=document.getElementById("tasklist");
+            if(count!=0){
+                node.innerHTML="";
+            }
+            for(i=0;i<=taskList.length-1;i++){
+                var button=document.createElement("div");
+                var card=document.createElement("div");
+                card.className="card";
+                // button.value=i;
+                button.innerHTML=`<button value="${i}" onclick="deleteClick(this)"></button> <button value="${i}" onclick="changeclick(this)"></button>`;
+                card.innerHTML=`<p>${taskList[i]}</p>`;
+                card.appendChild(button);
+                node.appendChild(card);
+                count++;
+            }
+        }
+        function renderlist2(){
+            renderlist();
+            var node2=document.getElementById("completed");
+            if(count1!=0){
+                node2.innerHTML="";
+            }
+            for(i=0;i<=completed.length-1;i++){
+                var button1=document.createElement("div");
+                var card1=document.createElement("div");
+                card1.className="card";
+                // button.value=i;
+                button1.innerHTML=`<button value="${i}"></button>`;
+                card1.innerHTML=`<p>${completed[i]}</p>`;
+                card1.appendChild(button1);
+                node2.appendChild(card1);
+                count++;
+            }
+        }
+        function changeclick(e){
+            var num=e.value;
+            let element = taskList[num];
+            taskList.splice(num, 1);
+            completed.push(element);
+            renderlist2();
+        }
+        function deleteClick(e){
+            var num=e.value;
+            taskList.splice(num,1);
+            renderlist();
+        }
+    </script>
+</head>
+<body>
+    <header class="header1">
+        <center>
+            <input id="textbox" type="text">
+            <button id="btn" onclick="btnclick()">+</button>
+        </center>
+    </header>
+    <div id="tasklist">
+
+    </div>
+    <hr>
+    <div id="completed">
+
+    </div>
+</html>
